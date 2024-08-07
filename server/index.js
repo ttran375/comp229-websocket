@@ -1,14 +1,3 @@
-# WebSockets
-
-## Agenda 1: WebSocket establishes a handshake between server and client
-
-```sh
-yarn add uuid websocket
-```
-
-`server/index.js`
-
-```js
 const { WebSocketServer } = require("ws");
 const http = require("http");
 
@@ -19,4 +8,3 @@ const port = 8000;
 server.listen(port, () => {
   console.log(`WebSocket server is running on port ${port}`);
 });
-```
