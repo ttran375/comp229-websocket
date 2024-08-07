@@ -34,6 +34,24 @@ wsServer.on("connection", function (connection) {
 });
 ```
 
+<!-- Successful WebSocket server handshake
+
 ```sh
 wget --server-response --header="Connection: Upgrade" --header="Upgrade: websocket" --header="Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==" --header="Sec-WebSocket-Version: 13" http://127.0.0.1:8000/
+```
+
+- `--server-response`: Prints the HTTP server response headers.
+- `--header="Connection: Upgrade"`: Adds the `Connection: Upgrade` header to the request.
+- `--header="Upgrade: websocket"`: Adds the `Upgrade: websocket` header to the request.
+- `--header="Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw=="`: Adds the `Sec-WebSocket-Key` header to the request (you can use any base64-encoded string).
+- `--header="Sec-WebSocket-Version: 13"`: Adds the `Sec-WebSocket-Version: 13` header to the request. -->
+
+
+## client
+
+```sh
+yarn create vite client --template react
+cd client
+yarn
+yarn dev
 ```
