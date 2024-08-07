@@ -1,0 +1,19 @@
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vsls-contrib.gitdoc",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "streetsidesoftware.code-spell-checker",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "VisualStudioExptTeam.intellicode-api-usage-examples",
+        "DavidAnson.vscode-markdownlint",
+        "rangav.vscode-thunder-client",
+        "GitHub.copilot"
+      ]
+    }
+  }
+}
