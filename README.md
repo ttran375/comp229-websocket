@@ -2,6 +2,8 @@
 
 ## Agenda 1: WebSocket establishes a handshake between server and client
 
+### Creating a handshake at the server
+
 ```sh
 yarn add uuid websocket
 ```
@@ -46,12 +48,41 @@ wget --server-response --header="Connection: Upgrade" --header="Upgrade: websock
 - `--header="Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw=="`: Adds the `Sec-WebSocket-Key` header to the request (you can use any base64-encoded string).
 - `--header="Sec-WebSocket-Version: 13"`: Adds the `Sec-WebSocket-Version: 13` header to the request. -->
 
+### Creating a handshake at the client
 
-## client
+Open a new Terminal at root directory:
 
 ```sh
 yarn create vite client --template react
 cd client
+```
+
+`client/src/App.jsx`
+
+```js
+import useWebSocket from "react-use-websocket";
+
+import "./App.css";
+
+const WS_URL = "ws://127.0.0.1:8000";
+
+function App() {
+  useWebSocket(WS_URL, {
+    onOpen: () => {
+      console.log("WebSocket connection established.");
+    },
+  });
+
+  return <div>Hello WebSockets!</div>;
+}
+
+export default App;
+```
+
+```sh
+yarn add websocket react-use-websocket 
 yarn
 yarn dev
 ```
+
+## Agenda 2: Real-time message transmission
