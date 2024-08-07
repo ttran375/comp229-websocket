@@ -1,5 +1,7 @@
 const { WebSocketServer } = require("ws");
 const http = require("http");
+const { v4: uuidv4 } = require('uuid'); // Importing v4 from uuid
+
 
 // Spinning the http server and the WebSocket server.
 const server = http.createServer();

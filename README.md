@@ -33,3 +33,7 @@ wsServer.on("connection", function (connection) {
   console.log(`${userId} connected.`);
 });
 ```
+
+```sh
+wget --server-response --header="Connection: Upgrade" --header="Upgrade: websocket" --header="Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==" --header="Sec-WebSocket-Version: 13" http://127.0.0.1:8000/
+```
